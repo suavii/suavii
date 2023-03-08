@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SUAVII | 3D information Card</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js" integrity="sha512-YqX0dBrbisAejDMPCn2AbiSQ8ap7IfYQxIDnfUZH3OveZlZMUk/U6WBIPEX4fgtqfNGFD9uyb3endHI5ks6raA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#3eb0f7">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#3eb0f7">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+   <div class="container">
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/bali.jpg">
+            </div>
+            <div class="contentBx">
+                <h2>Summer in Bali</h2>
+                <p>Located only eight degrees south of the equator, Bali's summer runs from December to February and is the height of their wet season.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/nyc.jpg">
+            </div>
+            <div class="contentBx">
+                <h2>Winter in NYC</h2>
+                <p>It will be a sunny, breezy and cool day with highs in the upper 30s to lower near 40. A gusty, west wind will make it feel even cooler, more like the upper 20s.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/texas.jpg">
+            </div>
+            <div class="contentBx">
+                <h2>Winter in Texas</h2>
+                <p>In Winters, the summers are hot and humid; the winters are short, cold, dry, and windy; and it is partly cloudy year round.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/California.jpg">
+            </div>
+            <div class="contentBx">
+                <h2>California</h2>
+                <p>The average winter temperature in California is between 50 and 60 degrees Fahrenheit (10 to 15 Celsius).</p>
+            </div>
+        </div>
+   </div>
+   
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".box"),
+        {
+            max: 25,
+            speed: 400
+        });
+    </script>
+</body>
+</html>

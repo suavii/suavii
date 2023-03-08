@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* scroll-behavior: smooth; */
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+header .logo
+{
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    z-index: 10000;
+}
+header .logo span
+{
+    color: #37d72f;
+}
+header .toggle
+{
+    max-width: 60px;
+    cursor: pointer;
+    z-index: 10000;
+}
+header .toggle img
+{
+    width: 100%;
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: #111;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: #37d72f;
+    transform-origin: top;
+    transform: skew(-25deg);
+    z-index: 1;
+}
+.banner video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    pointer-events: none;
+}
+.banner .textBox
+{
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+}
+.banner .textBox h2
+{
+    color: #fff;
+    font-size: 3rem;
+}
+.banner .textBox p
+{
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 5px 0 25px;
+}
+.banner .textBox a
+{
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.banner .textBox a:hover
+{
+    transform: translateY(-5px);
+    background: #37d72f;
+    letter-spacing: 2px;
+}
+.banner .imgBox
+{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    z-index: 2;
+}
+.banner .imgBox img
+{
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    z-index: 10000;
+}
+.sci
+{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    display: inline-block;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+.sci li a:hover
+{
+    transform: translateY(-5px);
+    color: #37d72f;
+}
+.copyrightText
+{
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+.copyrightText a
+{
+    color: #37d72f;
+    font-weight: 500;
+    text-decoration: none;
+}
+.copyrightText a:hover
+{
+    color: #12fc06;
+}
+.navigation
+{
+    display: none;
+}
+.navigation.active
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 400px;
+    height: 100vh;
+    background: #333;
+    transition: 0.5s;
+}
+.navigation li
+{
+    list-style: none;
+    overflow: hidden;
+}
+.navigation li a
+{
+    font-size: 2.5rem;
+    color: #12fc06;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+.navigation li a:hover
+{
+    background: #fff;
+    color: #000;
+    padding: 8px 15px;
+    letter-spacing: 2px;
+}
+@media (max-width: 991px)
+{
+    header
+    {
+        padding: 20px 20px;
+        z-index: 10;
+    } 
+    .navigation.active header, header .logo
+    {
+        z-index: -1;
+    }
+    .navigation.active
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background: #333; 
+        z-index: 20;
+    }
+    .navigation li
+    {
+        list-style: none; 
+    }
+    .navigation li a
+    {
+        display: inline-block;
+        font-size: 1.5rem;
+        color: #12fc06;
+        text-decoration: none;
+        font-weight: 500;
+        margin: 10px 0;
+        transition: 0.5s;
+    }
+    .banner
+    {
+        padding: 150px 20px 0;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .banner::before 
+    {
+        width: 150px;
+        transform: skew(-25deg) translateX(50%);
+    }
+    .banner .textBox
+    {
+        max-width: 100%;
+    }
+    .sci 
+    {
+        top: 80px;
+        right: 0px;
+        flex-direction: column;
+    }
+    .sci li a
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background: rgba(51, 51, 51, 0.498);
+    }
+    .copyrightText
+    {
+        bottom: 0px;
+        left: initial;
+        z-index: 10;
+        background: #333;
+        display: block;
+        width: 100%;
+        padding: 20px 20px;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
