@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SUAVII | Fitness Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#3eb0f7">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#3eb0f7">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><span>Fit</span>ness.</a>
+        <div class="toggle" onclick="toggleMenu()"><img src="images/toggle.png"></div>
+        <ul class="navigation" onclick="toggleMenu()">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <div class="banner">
+        <video src="images/bg.mp4" autoplay loop muted type="video/mp4" autobuffer preload="auto" poster="poster.png"></video>
+        <div class="textBox">
+            <h2>More Than Fitness</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, eveniet culpa voluptate commodi dolores corrupti voluptates ipsam nulla ratione ipsa laborum ducimus porro, sapiente itaque laudantium, placeat magni dignissimos dolor.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="imgBox">
+            <img src="images/man.png">
+        </div>
+        <ul class="sci">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <p class="copyrightText">&copy; <time id="year"></time> - Designed & Developed by<span><a href="#"> SUAVII</a></span></p>
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const year = document.getElementById("year");
+        const thisYear = new Date().getFullYear();
+        year.setAttribute("datetime", thisYear);
+        year.textContent = thisYear
+    </script>
+
+    <script>
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>
+
+
